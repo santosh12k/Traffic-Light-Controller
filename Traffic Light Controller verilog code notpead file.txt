@@ -21,14 +21,7 @@
 
 
 
-   parameter [2:0] north=3'b000;
-   parameter [2:0] north_y=3'b001;
-   parameter [2:0] south=3'b010;
-   parameter [2:0] south_y=3'b011;
-   parameter [2:0] east=3'b100;
-   parameter [2:0] east_y=3'b101;
-   parameter [2:0] west=3'b110;
-   parameter [2:0] west_y=3'b111;
+  
 module Traffic_Light_controller_design(north_light,south_light,east_light,west_light,clk,rst);
 
    output reg [2:0] north_light,south_light,east_light,west_light; 
@@ -38,7 +31,15 @@ module Traffic_Light_controller_design(north_light,south_light,east_light,west_l
    reg [2:0] state;
  
    reg [2:0] count;
- 
+
+   parameter [2:0] north=3'b000;
+   parameter [2:0] north_y=3'b001;
+   parameter [2:0] south=3'b010;
+   parameter [2:0] south_y=3'b011;
+   parameter [2:0] east=3'b100;
+   parameter [2:0] east_y=3'b101;
+   parameter [2:0] west=3'b110;
+   parameter [2:0] west_y=3'b111;
 
    always @(posedge clk, posedge rst)
      begin
